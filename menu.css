@@ -1,0 +1,495 @@
+/*****************general*****************/
+
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 0.9em;
+}
+
+p {
+  font-size: 16px;
+}
+
+:root {
+  --primary: #9356dc;
+  --secondary: #ff79da;
+  --tertiary: #99e2d0;
+}
+
+/*****************nav*****************/
+
+nav {
+  background-color: white;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .logo {
+  margin: 0;
+  font-size: 30px;
+}
+
+nav i {
+  position: absolute;
+  left: 30px;
+  top: 15px;
+  font-size: 25px;
+  color: black;
+  opacity: 1;
+}
+
+/*****************taste+heart*****************/
+
+.taste-heart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  margin-top: -57px !important;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: relative;
+  width: auto;
+}
+
+.taste-heart h1 {
+  margin: 30px 10px;
+}
+
+.taste-heart i {
+  font-size: 25px;
+}
+
+.menu-heart-custom-empty {
+  position: relative;
+}
+
+.menu-heart-custom-full {
+  position: relative;
+  right: 25px;
+  color: transparent;
+}
+
+.menu-heart-custom-full:active {
+  opacity: 1;
+  background-image: linear-gradient(#b472e4, #e47cde);
+  -webkit-background-clip: text;
+  border: 0;
+}
+
+
+/*******************page-menu***********/
+
+.banner {
+  height: 500px;
+  width: auto;
+  background-size: cover;
+  background-position: center;
+}
+
+.page-menu {
+  background-color: #eaeaea;
+}
+
+.page-menu h2 {
+  text-align: start;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.span {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  line-height: 30px;
+  align-self: flex-start;
+  margin-left: 7%;
+}
+
+span {
+  background-color: #99e2d0;
+  height: 3px;
+  width: 40px;
+  margin-right: 292px;
+}
+
+.box-item {
+  height: 72px;
+  width: 85%;
+  background-color: white;
+  border-radius: 20px;
+  text-align: start;
+  display: flex;
+  line-height: 30px;
+  box-shadow: 1px 6px 9px 0px rgba(0, 0, 0, 0.14);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.box-info {
+  padding: 7px 7px 7px 20px;
+  line-height: 23px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.box-info p {
+  font-size: 0.85em;
+}
+
+.effect .fa-circle-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 70px;
+  color: white;
+  font-size: 20px;
+}
+
+.effect {
+  background-color: #50e2ac;
+  width: 50px;
+  height: 72px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transform: translateX(100%);
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: transform 0.5s ease;
+}
+
+.price {
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  transition: transform 0.5s ease;
+  font-weight: bolder;
+}
+
+/****************animation*************/
+
+.box-item:active .effect {
+  transform: translateX(0);
+}
+
+.box-item:active .price {
+  transform: translateX(-50px);
+}
+
+.box-item:not(:active) .effect {
+  transition: transform 0.5s ease;
+  transform: translateX(100%);
+}
+
+@keyframes green_effect {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.box-item:active .effect {
+  animation-name: "green_effect";
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-menu .box-item {
+  opacity: 0;
+}
+
+.page-menu .box-item:nth-child(1) {
+  animation: fade-in 1.2s ease-in-out 0.5s forwards;
+}
+
+.page-menu .box-item:nth-child(2) {
+  animation: fade-in 1.2s ease-in-out 0.7s forwards;
+}
+
+.page-menu .box-item:nth-child(3) {
+  animation: fade-in 1.2s ease-in-out 0.9s forwards;
+}
+
+.page-menu .box-item:nth-child(4) {
+  animation: fade-in 1.2s ease-in-out 1.5s forwards;
+}
+
+.page-menu .box-item:nth-child(5) {
+  animation: fade-in 1.2s ease-in-out 1.7s forwards;
+}
+
+.page-menu .box-item:nth-child(6) {
+  animation: fade-in 1.2s ease-in-out 1.9s forwards;
+}
+
+.page-menu .box-item:nth-child(7) {
+  animation: fade-in 1.2s ease-in-out 2.3s forwards;
+}
+
+.page-menu .box-item:nth-child(8) {
+  animation: fade-in 1.2s ease-in-out 2.5s forwards;
+}
+
+.page-menu .box-item:nth-child(9) {
+  animation: fade-in 1.2s ease-in-out 2.7s forwards;
+}
+
+.page-menu .box-item:nth-child(10) {
+  animation: fade-in 1.2s ease-in-out 3.1s forwards;
+}
+
+.page-menu .box-item:nth-child(11) {
+  animation: fade-in 1.2s ease-in-out 3.3s forwards;
+}
+
+.page-menu .box-item:nth-child(12) {
+  animation: fade-in 1.2s ease-in-out 3.5s forwards;
+  -webkit-animation: fade-in 1.2s ease-in-out 3.5s forwards;
+}
+
+.button {
+  width: 186px;
+  border-radius: 30px;
+  height: 23px;
+  padding: 16px;
+  margin-top: 25px;
+  background-image: linear-gradient(
+    to right bottom,
+    #e270da,
+    #d168db,
+    #be61db,
+    #aa5bdc,
+    #9356dc
+  );
+  box-shadow: 1px 6px 9px 0px rgba(0, 0, 0, 0.14);
+  border: none;
+  color: white;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-size: 16px;
+  margin-bottom: 25px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:hover {
+  filter: brightness(1.1);
+  box-shadow: 1px 6px 9px 0px rgba(0, 0, 0, 0.3);
+}
+
+/*************footer***********/
+
+footer {
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 5%;
+}
+
+footer li {
+  gap: 20px;
+  list-style-type: none;
+  line-height: 25px;
+}
+
+footer ul {
+  margin-top: 10px;
+}
+
+footer i {
+  margin-right: 5px;
+}
+
+footer .logo {
+  margin-bottom: 50px;
+}
+
+.test {
+  width: 30px;
+  margin: -10px;
+  background-color: #50e2ac;
+  height: 128%;
+  border-radius: 0px 10px 10px 1px;
+}
+
+.box:hover {
+  animation: Test 1s ease-in-out forwards;
+}
+
+
+@media (min-width: 768px) {
+  .taste-heart {
+    background-color: white;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+
+  .page-menu {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .banner-palettedugout {
+    margin-bottom: -41px;
+  }
+  .banner-alafrancaise {
+    margin-bottom: -41px;
+  }
+  .banner-lanoteenchante {
+    margin-bottom: -41px;
+  }
+  .banner-delicedessens {
+    margin-bottom: -41px;
+  }
+
+  .taste-heart {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+  }
+
+  .page-menu {
+    background-color: #f4f4f4;
+  }
+
+  .page-menu .box {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .box-info h3 {
+    font-size: 1em;
+  }
+
+  .effect {
+    width: 60px;
+  }
+
+  .box-item:active .effect {
+    transform: translateX(0);
+  }
+
+  .box-item:active .price {
+    transform: translateX(-60px);
+  }
+
+  .box-item:not(:active) .effect {
+    transition: transform 0.5s ease;
+    transform: translateX(100%);
+  }
+
+  @keyframes green_effect {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .box-item:active .effect {
+    animation-name: "green_effect";
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .box-info {
+    line-height: 26px;
+  }
+  .box-info p {
+    font-size: 1em;
+  }
+
+  footer {
+    height: 125px;
+    padding: 0;
+  }
+  .text-footer {
+    flex-direction: row;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    height: 100%;
+    padding: 3%;
+  }
+
+  footer ul {
+    flex-direction: row;
+    display: flex;
+    gap: 29px;
+  }
+
+  footer .logo {
+    margin: 0;
+    order: 5;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1224px) {
+  .box-item:hover .effect {
+    transform: translateX(0);
+  }
+
+  .box-item:hover .price {
+    transform: translateX(-60px);
+  }
+
+  .box-item:not(:hover) .effect {
+    transition: transform 0.5s ease;
+    transform: translateX(100%);
+  }
+
+  .box-item:hover .effect {
+    animation-name: "green_effect";
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+
+  .box-info h3 {
+    font-size: 1.3em;
+  }
+}
